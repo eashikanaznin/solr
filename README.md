@@ -14,7 +14,7 @@ If you are **not using a Docker-based installation**, follow these steps:
 
 1. Go to the **Solr download page**: [https://solr.apache.org/downloads.html](https://solr.apache.org/downloads.html)
 2. Download the **Binary releases**.
-3. Unzip the downloaded file.
+3. Unzip the downloaded file ang go to 'bin'.
 4. Start Solr from the command line:
    ```sh
    solr start
