@@ -58,3 +58,17 @@ To connect Solr with Drupal, follow these steps:
 11. Paste the config files you exported from "Get config.zip".
 12. Now Go to the server page, you should see "The Solr server could be reached."
 This will connect your Drupal site to Solr successfully. 🚀🚀🚀
+### Add fields
+1. Using the Manage administrative menu, navigate to Configuration > Search and Metadata > Search API.
+2. Locate the index you created earlier and open it for editing.
+3. Open the Fields tab.
+4. Click Add fields.
+5. The Add fields to index... modal dialog appears.
+6. Click save
+### Create Index
+1. Using the Manage administrative menu, navigate to Configuration > Search and Metadata > Search API.
+2. Click Add Index.
+3. Enter an Index Name of your choosing.For Datasources, select Content.
+4. Scroll down and select the Server you created earlier.
+5. Press Save.
+### Populate Search API Indexes
