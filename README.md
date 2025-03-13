@@ -9,7 +9,7 @@ This guide will help you set up **Apache Solr** with **Drupal** using the **Sear
 
 ## Install Solr
 
-### Local Setup (Non-Docker Installation)
+#### Local Setup (Non-Docker Installation)
 If you are **not using a Docker-based installation**, follow these steps:
 
 1. Go to the **Solr download page**: [https://solr.apache.org/downloads.html](https://solr.apache.org/downloads.html)
@@ -18,15 +18,43 @@ If you are **not using a Docker-based installation**, follow these steps:
 4. Start Solr from the command line:
    ```sh
    solr start
-## Install and Enable Search API and Solr Search API Modules
+   ```
+To Check to Solr Admin Interface go to http://localhost:8983/solr/#/
 
-- [Search API Module](https://www.drupal.org/project/search_api)
-- [Search API Solr Module](https://www.drupal.org/project/search_api_solr)
+### Install and Enable Search API and Solr Search API Modules
+
+✅ [Search API Module](https://www.drupal.org/project/search_api)
+✅ [Search API Solr Module](https://www.drupal.org/project/search_api_solr)
 
 To integrate Solr with Drupal, install the required modules using Composer:
 
 ```sh
-composer require drupal/search_api
-composer require drupal/search_api_solr
+composer require drupal/search_api drupal/search_api_solr
 drush en search_api search_api_solr -y
+```
 
+### Configure Solr Server in Drupal
+
+To connect Solr with Drupal, follow these steps:
+
+1. Navigate to **Search API Configuration**:  
+   Go to:  /admin/config/search/search-api
+2. Click **"Add Server"** and fill in the following details:
+
+- **HTTP Protocol**: `http`
+- **Solr Node**: `solr`
+- **Solr Port**: `8983`
+- **Solr Path**: `/`
+- **Solr Host Context**: `solr`
+
+3. Save the configuration.
+4. Go to : admin/config/search/search-api/server/solr_search
+5. export config using "Get config.zip" button and unzip.
+6. Now go to the Solr Admin Interface and click "Core Admin"
+7. Click "Add core" and fill up the form.
+8. The name sould be the same you added in the Search API config file and hit add core.
+9. You will see an error message regarding the missing files. Now go to the Solr folder, [/server/solr/THE-CORE-NAME]
+10. Create a folder 'conf'
+11. Paste the config files you exported from "Get config.zip".
+12. Now Go to the server page, you should see "The Solr server could be reached."
+This will connect your Drupal site to Solr successfully. 🚀🚀🚀
