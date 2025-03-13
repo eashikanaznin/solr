@@ -1,4 +1,4 @@
-# solr
+# Solr & Drupal Search Setup Guide
 
 Solr & Drupal Search Setup Guide
 This guide will help you set up Apache Solr with Drupal using the Search API module. Follow these steps to install, configure, and integrate Solr for high-performance search.
