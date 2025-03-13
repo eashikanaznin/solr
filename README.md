@@ -80,4 +80,4 @@ ddev drush en facets -y
 - Ensure Solr is running: ddev exec solr status
 - If indexing fails, clear the index: ddev drush search-api:clear
 - Boost fields in Search API settings to improve relevance.
-![image](https://github.com/user-attachments/assets/7a7f1156-7699-47c8-b0ee-34387083214e)
+
