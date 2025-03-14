@@ -58,6 +58,13 @@ To connect Solr with Drupal, follow these steps:
 11. Paste the config files you exported from "Get config.zip".
 12. Now Go to the server page, you should see "The Solr server could be reached."
 This will connect your Drupal site to Solr successfully. 🚀🚀🚀
+
+### Create Index
+1. Using the Manage administrative menu, navigate to Configuration > Search and Metadata > Search API.
+2. Click Add Index.
+3. Enter an Index Name of your choosing.For Datasources, select Content.
+4. Scroll down and select the Server you created earlier.
+5. Press Save.
 ### Add fields
 1. Using the Manage administrative menu, navigate to Configuration > Search and Metadata > Search API.
 2. Locate the index you created earlier and open it for editing.
@@ -65,12 +72,6 @@ This will connect your Drupal site to Solr successfully. 🚀🚀🚀
 4. Click Add fields.
 5. The Add fields to index... modal dialog appears.
 6. Click save
-### Create Index
-1. Using the Manage administrative menu, navigate to Configuration > Search and Metadata > Search API.
-2. Click Add Index.
-3. Enter an Index Name of your choosing.For Datasources, select Content.
-4. Scroll down and select the Server you created earlier.
-5. Press Save.
 ### Populate Search API Indexes
 1. Using the Manage administrative menu, navigate to Configuration > Search and Metadata > Search API.
 2. Under the Name column, click the link for the Search API index you need to reindex.
@@ -111,4 +112,26 @@ composer require 'drupal/search_api_spellcheck:^4.0'
 2. Select the field and change assign type to 'spellcheck'.
 3. In the view, add header for spell check.
    
-### Facets
+### Facets 🎯
+1. Install the following module and enable it
+```sh
+composer require drupal/facets
+drush en -y facets
+drush cr
+```
+
+3.  Go to Configuration → Search and Metadata → Facets.
+4. Click Add Facet.
+5. Fill in the details:
+
+    Facet Name: Enter a descriptive name (e.g., "Categories").
+    Facet Source: Select the Search API view you created.
+    Facet widget: Choose the display type (e.g., Checkboxes, Dropdown, Links).
+
+6. Click Save and Continue.
+7. Place the Facet in the Block
+    Navigate to Structure → Block Layout.
+    Locate the region where you want the facet filter to appear.
+    Click Place Block and search for your newly created Facet block.
+8. Save and check.
+   
