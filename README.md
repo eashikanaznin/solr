@@ -48,7 +48,7 @@ To connect Solr with Drupal, follow these steps:
 - **Solr Host Context**: `solr`
 
 3. Save the configuration.
-4. Go to : admin/config/search/search-api/server/solr_search
+4. Go to : admin/config/search/search-api/server/YOUR_SERVER_NAME
 5. export config using "Get config.zip" button and unzip.
 6. Now go to the Solr Admin Interface and click "Core Admin"
 7. Click "Add core" and fill up the form.
@@ -89,3 +89,12 @@ This will connect your Drupal site to Solr successfully. 🚀🚀🚀
    *(Replace `your_index_name` with the actual name of your Search API index.)*
 5. Choose **Create a page**, and configure the display settings as needed.
 6. Click **Save and exit** to finalize the view.
+
+### Preprocessors
+1. Navigate to Configuration > Search and Metadata > Search API (admin/config/search/search-api).
+2. Edit the index to which to add the processor.
+3. Open the Processors tab.
+4. Read through the list of processors, selecting one or more for use. for example, 'content access', 'Highlight'.
+
+### Autocomplete
+### Facets
