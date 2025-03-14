@@ -1,4 +1,4 @@
-# Solr & Drupal Search Setup Guide
+# Solr & Drupal Search Setup Guide 🔍
 
 This guide will help you set up **Apache Solr** with **Drupal** using the **Search API** module. Follow these steps to install, configure, and integrate Solr for high-performance search.
 
@@ -97,4 +97,18 @@ This will connect your Drupal site to Solr successfully. 🚀🚀🚀
 4. Read through the list of processors, selecting one or more for use. for example, 'content access', 'Highlight'.
 
 ### Autocomplete
+1. Install the following module and enable it
+```sh
+   composer require 'drupal/search_api_autocomplete:^1.10'
+```
+2. Select the search view from the config.
+   
+### Spell Check
+1. Install the following module and enable it
+```sh
+composer require 'drupal/search_api_spellcheck:^4.0'
+```
+2. Select the field and change assign type to 'spellcheck'.
+3. In the view, add header for spell check.
+   
 ### Facets
