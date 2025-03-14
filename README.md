@@ -80,14 +80,6 @@ This will connect your Drupal site to Solr successfully. 🚀🚀🚀
 ```sh
    drush sapi-i
 ```
-### Create a search view
-1. Go to Manage → Configuration → Search API in your Drupal admin panel.
-2. Click "Add index" and give it a name.
-3. Choose the Solr server and set the default language.
-Select the content types (e.g., nodes, users, taxonomy terms) to be indexed.
-Configure the fields you want searchable.
-Save the index and index the content.
-Create a Search API view to display search results.
 
 ### Create a Search API View to Display Results
 1. Go to **Structure > Views** (`/admin/structure/views`).
