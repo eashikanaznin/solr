@@ -4,6 +4,7 @@ This guide will help you set up **Apache Solr** with **Drupal** using the **Sear
 
 ## Prerequisites
 - A working **Drupal 10** site (**DDEV, Lando, or local setup**)
+- Install Java.
 
 ---
 
