@@ -3,15 +3,15 @@
 This guide will help you set up **Apache Solr** with **Drupal** using the **Search API** module. Follow these steps to install, configure, and integrate Solr for high-performance search.
 
 ## Prerequisites
-- A working **Drupal 10** site (**DDEV, Lando, or local setup**)
+- A working **Drupal 10** site 
 - Install Java.
 
 ---
 
 ## Install Solr
 
-#### Local Setup (Non-Docker Installation)
-If you are **not using a Docker-based installation**, follow these steps:
+#### Local Setup 
+
 
 1. Go to the **Solr download page**: [https://solr.apache.org/downloads.html](https://solr.apache.org/downloads.html)
 2. Download the **Binary releases**.
